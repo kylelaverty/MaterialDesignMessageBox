@@ -104,7 +104,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\MaterialDesignMessageBox\MaterialDesignMessageBox.csproj">
+    <ProjectReference Include="..\MaterialDesignMessageBox\MaterialDesignMessageBox.csproj">
       <Project>{faeb22f8-0028-4c2e-98dd-d227e262d09b}</Project>
       <Name>MaterialDesignMessageBox</Name>
     </ProjectReference>
