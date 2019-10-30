@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MaterialDesignMessageBox</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>MaterialDesignMessageBox</title>
         <authors>kylelaverty</authors>
         <owners>kylelaverty</owners>
@@ -11,7 +11,7 @@
         <projectUrl>https://github.com/kylelaverty/MaterialDesignMessageBox/</projectUrl>
 		<repository type="git" url="https://github.com/kylelaverty/MaterialDesignMessageBox"/>
         <description>A simple material design themed message box for use with WPF applications.</description>
-        <releaseNotes>Initial Release</releaseNotes>
+        <releaseNotes>Documentation Release</releaseNotes>
         <tags>MessageBox CustomMessageBox MaterialDesign Dialog Message</tags>
         
         <dependencies>
