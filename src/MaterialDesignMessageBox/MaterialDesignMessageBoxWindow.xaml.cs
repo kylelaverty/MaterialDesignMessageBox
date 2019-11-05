@@ -1,18 +1,7 @@
 ﻿using MaterialDesignColors;
 using MaterialDesignThemes.Wpf;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace MaterialDesignMessageBox
 {
@@ -78,39 +67,39 @@ namespace MaterialDesignMessageBox
             {
                 case MessageBoxButton.OKCancel:
                     // Hide all but OK, Cancel
-                    Button_OK.Visibility = System.Windows.Visibility.Visible;
+                    Button_OK.Visibility = Visibility.Visible;
                     Button_OK.Focus();
-                    Button_Cancel.Visibility = System.Windows.Visibility.Visible;
+                    Button_Cancel.Visibility = Visibility.Visible;
 
-                    Button_Yes.Visibility = System.Windows.Visibility.Collapsed;
-                    Button_No.Visibility = System.Windows.Visibility.Collapsed;
+                    Button_Yes.Visibility = Visibility.Collapsed;
+                    Button_No.Visibility = Visibility.Collapsed;
                     break;
                 case MessageBoxButton.YesNo:
                     // Hide all but Yes, No
-                    Button_Yes.Visibility = System.Windows.Visibility.Visible;
+                    Button_Yes.Visibility = Visibility.Visible;
                     Button_Yes.Focus();
-                    Button_No.Visibility = System.Windows.Visibility.Visible;
+                    Button_No.Visibility = Visibility.Visible;
 
-                    Button_OK.Visibility = System.Windows.Visibility.Collapsed;
-                    Button_Cancel.Visibility = System.Windows.Visibility.Collapsed;
+                    Button_OK.Visibility = Visibility.Collapsed;
+                    Button_Cancel.Visibility = Visibility.Collapsed;
                     break;
                 case MessageBoxButton.YesNoCancel:
                     // Hide only OK
-                    Button_Yes.Visibility = System.Windows.Visibility.Visible;
+                    Button_Yes.Visibility = Visibility.Visible;
                     Button_Yes.Focus();
-                    Button_No.Visibility = System.Windows.Visibility.Visible;
-                    Button_Cancel.Visibility = System.Windows.Visibility.Visible;
+                    Button_No.Visibility = Visibility.Visible;
+                    Button_Cancel.Visibility = Visibility.Visible;
 
-                    Button_OK.Visibility = System.Windows.Visibility.Collapsed;
+                    Button_OK.Visibility = Visibility.Collapsed;
                     break;
                 default:
                     // Hide all but OK
-                    Button_OK.Visibility = System.Windows.Visibility.Visible;
+                    Button_OK.Visibility = Visibility.Visible;
                     Button_OK.Focus();
 
-                    Button_Yes.Visibility = System.Windows.Visibility.Collapsed;
-                    Button_No.Visibility = System.Windows.Visibility.Collapsed;
-                    Button_Cancel.Visibility = System.Windows.Visibility.Collapsed;
+                    Button_Yes.Visibility = Visibility.Collapsed;
+                    Button_No.Visibility = Visibility.Collapsed;
+                    Button_Cancel.Visibility = Visibility.Collapsed;
                     break;
             }
         }
@@ -120,12 +109,12 @@ namespace MaterialDesignMessageBox
             if (!icon.HasValue)
             {
                 Image_MessageBox.Kind = PackIconKind.Null;
-                Image_MessageBox.Visibility = System.Windows.Visibility.Collapsed;
+                Image_MessageBox.Visibility = Visibility.Collapsed;
             }
             else
             {
                 Image_MessageBox.Kind = icon.Value;
-                Image_MessageBox.Visibility = System.Windows.Visibility.Visible;
+                Image_MessageBox.Visibility = Visibility.Visible;
             }
         }
 
