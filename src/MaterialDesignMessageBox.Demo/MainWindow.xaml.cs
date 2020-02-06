@@ -18,15 +18,15 @@ namespace MaterialDesignMessageBox.Demo
             MaterialMessageBox.ShowDialog(
                 this,
                 "Unable to Login, invalid username and/or password.",
-                null,
-                MessageBoxButton.OK, MaterialDesignColors.PrimaryColor.DeepOrange);
+                button: MessageBoxButton.OK, 
+                stylePrimaryColor: MaterialDesignColors.PrimaryColor.DeepOrange);
         }
 
         private void button_MessageWithCaptionAndButton_Click(object sender, RoutedEventArgs e)
         {
             MaterialMessageBox.ShowDialog(
                 this, 
-                "Unable to Login, invalid username and/or password.", 
+                "Unable to Login, invalid username and/or password.",
                 "Login Failure",
                 MessageBoxButton.OK);
         }
@@ -39,6 +39,17 @@ namespace MaterialDesignMessageBox.Demo
                 "Confirm Fuel Ejection",
                 MessageBoxButton.OKCancel,
                 PackIconKind.Exclamation);
+        }
+        
+        private void button_MessageWithCaptionButtonImageColor_Click(object sender, RoutedEventArgs e)
+        {
+            MaterialMessageBox.ShowDialog(
+                this,
+                "Are you sure you are ready to fly this plane?",
+                "Confirm Ready to Fly",
+                MessageBoxButton.OKCancel,
+                PackIconKind.Exclamation,
+                MaterialDesignColors.PrimaryColor.DeepOrange);
         }
     }
 }

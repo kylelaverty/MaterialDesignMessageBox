@@ -10,8 +10,8 @@ namespace MaterialDesignMessageBox
     /// </summary>
     internal partial class MaterialDesignMessageBoxWindow : Window
     {
-        internal const string _defaultColor = "Blue";
-
+        private const PrimaryColor _defaultColor = PrimaryColor.Blue;
+        
         internal string Caption
         {
             get
@@ -38,14 +38,25 @@ namespace MaterialDesignMessageBox
 
         public MessageBoxResult Result { get; set; }
 
-        internal MaterialDesignMessageBoxWindow(Window owner, string message, string caption, MessageBoxButton button, PackIconKind? icon, PrimaryColor primaryColor)
+        internal MaterialDesignMessageBoxWindow(Window owner, string message, string caption, MessageBoxButton button, PackIconKind? icon, PrimaryColor? primaryColor, ResourceDictionary primaryColorStyle)
         {
             InitializeComponent();
 
-            var thing = new ResourceDictionary();
-            thing.Source = new Uri("pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor." + primaryColor.ToString() + ".xaml");
-
-            this.Resources.MergedDictionaries.Add(thing);
+            // Apply the built in material design primary color styles
+            var primaryColorDictionary = new ResourceDictionary();
+            if (primaryColor.HasValue)
+            {
+                primaryColorDictionary.Source = new Uri("pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor." + primaryColor + ".xaml");
+            }
+            else if(primaryColorStyle != null)
+            {
+                primaryColorDictionary = primaryColorStyle;
+            }
+            else
+            {
+                primaryColorDictionary.Source = new Uri("pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor." + _defaultColor + ".xaml");
+            }
+            Resources.MergedDictionaries.Add(primaryColorDictionary);
 
             // Ensure parent window is shown when the message box tries to show up
             if (owner != null)

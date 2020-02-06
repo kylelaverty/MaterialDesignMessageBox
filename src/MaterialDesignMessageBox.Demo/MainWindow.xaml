@@ -39,5 +39,13 @@
                 VerticalAlignment="Top" 
                 Width="Auto" 
                 Click="button_MessageWithCaptionButtonImage_Click" />
+        <Button Content="Message + Caption + Button + Image + Color" 
+                Height="28" 
+                HorizontalAlignment="Left" 
+                Margin="12,10,0,0" 
+                Name="button_MessageWithCaptionButtonImageColor" 
+                VerticalAlignment="Top" 
+                Width="Auto" 
+                Click="button_MessageWithCaptionButtonImageColor_Click" />
     </StackPanel>
 </Window>

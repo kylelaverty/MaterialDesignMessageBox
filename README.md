@@ -31,19 +31,21 @@ MaterialMessageBox.ShowDialog(
     string caption,
     MessageBoxButton button,
     PackIconKind icon,
-    PrimaryColor stylePrimaryColor);
+    PrimaryColor stylePrimaryColor,
+    ResourceDictionary primaryColorStyle);
 ```
 
 ## Method Parameters
 
-| Property          | Type             | Required | Description                                                         |
-| ----------------- | ---------------- | -------- | ------------------------------------------------------------------- |
-| owner             | Window           | N        | WPF Window that owns this message box                               |
-| messageBoxText    | string           | Y        | Message to display in the message box                               |
-| caption           | string           | N        | Text to display in the title of the message box                     |
-| button            | MessageBoxButton | N        | Enum of which buttons to display (OK, OKCancel, YesNo, YesNoCancel) |
-| icon              | PackIconKind     | N        | Icon to use in the message box                                      |
-| stylePrimaryColor | PrimaryColor     | N        | Set the button colors based on the PrimaryColor enum                |
+| Property          | Type              | Required | Description                                                                                |
+| ----------------- | ----------------- | -------- | ------------------------------------------------------------------------------------------ |
+| owner             | Window            | N        | WPF Window that owns this message box                                                      |
+| messageBoxText    | string            | Y        | Message to display in the message box                                                      |
+| caption           | string            | N        | Text to display in the title of the message box                                            |
+| button            | MessageBoxButton  | N        | Enum of which buttons to display (OK, OKCancel, YesNo, YesNoCancel)                        |
+| icon              | PackIconKind      | N        | Icon to use in the message box                                                             |
+| stylePrimaryColor | PrimaryColor      | N        | Set the button colors based on the PrimaryColor enum, takes priority over primaryColorStyle|
+| primaryColorStyle | ResourceDictionary| N        | Set the button colors based on the provided Resource Dictionary                            |
 
 ### Enum Values
 
