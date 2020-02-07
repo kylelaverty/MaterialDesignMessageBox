@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MaterialDesignMessageBox</id>
-        <version>2.0.0-beta</version>
+        <version>2.0.1-beta</version>
         <title>MaterialDesignMessageBox</title>
         <authors>kylelaverty</authors>
         <owners>kylelaverty</owners>
@@ -21,7 +21,7 @@
     </metadata>
   
     <files>
-        <file src="MaterialDesignMessageBox\bin\Release\MaterialDesignMessageBox.dll" target="lib\net45"></file>
-        <file src="MaterialDesignMessageBox\bin\Release\MaterialDesignMessageBox.XML" target="lib\net45"></file>
+        <file src="MaterialDesignMessageBox\bin\Release\MaterialDesignMessageBox.dll" target="lib\net472"></file>
+        <file src="MaterialDesignMessageBox\bin\Release\MaterialDesignMessageBox.XML" target="lib\net472"></file>
     </files>
 </package>
